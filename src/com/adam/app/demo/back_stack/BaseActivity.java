@@ -78,6 +78,33 @@ public abstract class BaseActivity extends Activity {
 	}
 
 
+	/**
+	 * 
+	 * @param v
+	 */
+	public void onConfigFlag(View v) {
+		Intent intent = new Intent(this, IntentFlagSetAct.class);
+		this.startActivity(intent);
+	}
+	
+	/**
+	 * 
+	 * @param v
+	 */
+	public void onNext(View v) {
+		String input = mEdit.getText().toString();
+
+		if (sMap.containsKey(input)) {
+			Class<?> nextAct = sMap.get(input);
+
+			Intent intent = new Intent(this, nextAct);
+			intent.addFlags(FlagContent.INSTANCE.getFlag());
+			this.startActivity(intent);
+		} else {
+			Utils.showToast(this, "No activity to go");
+		}
+	}
+	
 
 	/**
 	 * 

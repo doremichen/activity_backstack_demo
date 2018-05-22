@@ -3,13 +3,8 @@
  */
 package com.adam.app.demo.back_stack;
 
-import java.util.Map;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 /**
@@ -57,27 +52,4 @@ public abstract class Utils {
 		return activity.toString();
 	}
 
-	/**
-	 * 
-	 */
-	public static void setIntentFlag(Activity activity) {
-		Intent intent = new Intent(activity, IntentFlagSetAct.class);
-		activity.startActivity(intent);
-	}
-
-	public static void goToNextAct(Activity activity, EditText edit,
-			Map<String, Class<?>> map) {
-
-		String input = edit.getText().toString();
-
-		if (map.containsKey(input)) {
-			Class<?> nextAct = map.get(input);
-
-			Intent intent = new Intent(activity, nextAct);
-			intent.addFlags(FlagContent.INSTANCE.getFlag());
-			activity.startActivity(intent);
-		} else {
-			showToast(activity, "No activity to go");
-		}
-	}
 }
