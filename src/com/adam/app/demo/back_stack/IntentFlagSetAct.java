@@ -35,6 +35,7 @@ public class IntentFlagSetAct extends Activity {
 		sMap.put(R.id.checkBox_multiple_task, ItemClickType.CHECKBOX_MULTIPLE_TASK);
 		sMap.put(R.id.checkBox_brought_to_fornt, ItemClickType.CHECKBOX_BROUGHT_TO_FRONT);
 		sMap.put(R.id.checkBox_clear_when_task_reset, ItemClickType.CHECKBOX_CLEAR_WHEN_TASK_RESET);
+		sMap.put(R.id.checkBox_no_animation, ItemClickType.CHECKBOX_NO_ANIMATION);
 	}
 	
 	
@@ -205,6 +206,25 @@ public class IntentFlagSetAct extends Activity {
 				Utils.Info(this, "[process] enter isChecked = " + isChecked);
 				
 				int flag = Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET;
+				
+				if (isChecked) {					
+					// Set flag value
+					FlagContent.INSTANCE.addFlag(flag);
+				} else {
+					// Remove flag value
+					FlagContent.INSTANCE.removeFlag(flag);
+				}
+
+			}
+    		
+    	}  ,
+    	CHECKBOX_NO_ANIMATION {
+
+			@Override
+			void process(boolean isChecked) {
+				Utils.Info(this, "[process] enter isChecked = " + isChecked);
+				
+				int flag = Intent.FLAG_ACTIVITY_NO_ANIMATION;
 				
 				if (isChecked) {					
 					// Set flag value

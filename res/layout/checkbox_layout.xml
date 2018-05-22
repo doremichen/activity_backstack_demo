@@ -61,6 +61,13 @@
         android:onClick="onCheckBoxClicked"
         android:text="Flag Activity clear when task reset" />
     
+    <CheckBox
+        android:id="@+id/checkBox_no_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBoxClicked"
+        android:text="Flag Activity No animation" />
+    
     <TextView
         android:id="@+id/text_flag_info"
         android:layout_width="fill_parent"
