@@ -52,10 +52,8 @@
         android:id="@+id/text_act_ins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_content_info"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="137dp"
-        android:layout_toRightOf="@+id/text_task_id"
+        android:layout_below="@+id/text_task_id"
+        android:layout_marginLeft="10dp"
         android:text="Activity Info:"
         android:textSize="24sp" />
 

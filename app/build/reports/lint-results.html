@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 59 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 58 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Jun 06 10:59:03 CST 2019      </nav>
+Check performed at Thu Jun 06 12:17:17 CST 2019      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -193,7 +193,7 @@ Check performed at Thu Jun 06 10:59:03 CST 2019      </nav>
       <a class="mdl-navigation__link" href="#LabelFor"><i class="material-icons warning-icon">warning</i>Missing accessibility label (1)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (11)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (23)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (11)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (10)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -251,7 +251,7 @@ Check performed at Thu Jun 06 10:59:03 CST 2019      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
 <tr>
-<td class="countColumn">11</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (32)</a>
 </td></tr></table>
@@ -713,7 +713,7 @@ Dismiss</button>            </div>
 <span class="lineno">  52 </span>        <span class="keyword">int</span> flag = FlagContent.INSTANCE.getFlag();
 <span class="lineno">  53 </span>        String strFlag = Integer.toHexString(flag);
 <span class="lineno">  54 </span>        
-<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="warning"><span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = "</span> + strFlag</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="warning"><span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = 0x"</span> + strFlag</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  56 </span>        mText_actIns.setText(<span class="string">"Activity Instance: "</span> + onActivityIns());
 <span class="lineno">  57 </span>        
 <span class="lineno">  58 </span>        <span class="comment">// reset intent flag</span></pre>
@@ -722,7 +722,7 @@ Dismiss</button>            </div>
 <span class="lineno">  52 </span>        <span class="keyword">int</span> flag = FlagContent.INSTANCE.getFlag();
 <span class="lineno">  53 </span>        String strFlag = Integer.toHexString(flag);
 <span class="lineno">  54 </span>        
-<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="warning"><span class="string">"Task Id: "</span></span> + onTaskId() + <span class="string">" intent flg = "</span> + strFlag);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="warning"><span class="string">"Task Id: "</span></span> + onTaskId() + <span class="string">" intent flg = 0x"</span> + strFlag);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  56 </span>        mText_actIns.setText(<span class="string">"Activity Instance: "</span> + onActivityIns());
 <span class="lineno">  57 </span>        
 <span class="lineno">  58 </span>        <span class="comment">// reset intent flag</span></pre>
@@ -731,7 +731,7 @@ Dismiss</button>            </div>
 <span class="lineno">  52 </span>        <span class="keyword">int</span> flag = FlagContent.INSTANCE.getFlag();
 <span class="lineno">  53 </span>        String strFlag = Integer.toHexString(flag);
 <span class="lineno">  54 </span>        
-<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="warning"><span class="string">" intent flg = "</span></span> + strFlag);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="warning"><span class="string">" intent flg = 0x"</span></span> + strFlag);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  56 </span>        mText_actIns.setText(<span class="string">"Activity Instance: "</span> + onActivityIns());
 <span class="lineno">  57 </span>        
 <span class="lineno">  58 </span>        <span class="comment">// reset intent flag</span></pre>
@@ -739,7 +739,7 @@ Dismiss</button>            </div>
 <span class="location"><a href="../../src/main/java/com/adam/app/demo/back_stack/BaseActivity.java">../../src/main/java/com/adam/app/demo/back_stack/BaseActivity.java</a>:56</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
 <span class="lineno">  53 </span>        String strFlag = Integer.toHexString(flag);
 <span class="lineno">  54 </span>        
-<span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = "</span> + strFlag);
+<span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = 0x"</span> + strFlag);
 <span class="caretline"><span class="lineno">  56 </span>        mText_actIns.setText(<span class="warning"><span class="string">"Activity Instance: "</span> + onActivityIns()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  57 </span>        
 <span class="lineno">  58 </span>        <span class="comment">// reset intent flag</span>
@@ -749,7 +749,7 @@ Dismiss</button>            </div>
 <span class="location"><a href="../../src/main/java/com/adam/app/demo/back_stack/BaseActivity.java">../../src/main/java/com/adam/app/demo/back_stack/BaseActivity.java</a>:56</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
 <span class="lineno">  53 </span>        String strFlag = Integer.toHexString(flag);
 <span class="lineno">  54 </span>        
-<span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = "</span> + strFlag);
+<span class="lineno">  55 </span>        mText_taskId.setText(<span class="string">"Task Id: "</span> + onTaskId() + <span class="string">" intent flg = 0x"</span> + strFlag);
 <span class="caretline"><span class="lineno">  56 </span>        mText_actIns.setText(<span class="warning"><span class="string">"Activity Instance: "</span></span> + onActivityIns());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  57 </span>        
 <span class="lineno">  58 </span>        <span class="comment">// reset intent flag</span>
@@ -762,7 +762,7 @@ Dismiss</button>            </div>
 <span class="lineno">  62 </span>        
 <span class="lineno">  63 </span>        <span class="comment">// Show flag information</span>
 <span class="lineno">  64 </span>        String value = Integer.toHexString(FlagContent.INSTANCE.getFlag());
-<span class="caretline"><span class="lineno">  65 </span>        mText_flag_info.setText(<span class="warning"><span class="string">"Flag value: "</span> + value</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  65 </span>        mText_flag_info.setText(<span class="warning"><span class="string">"Flag value: 0x"</span> + value</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  66 </span>    }
 <span class="lineno">  67 </span>    
 <span class="lineno">  68 </span>    <span class="javadoc">/**
@@ -772,7 +772,7 @@ Dismiss</button>            </div>
 <span class="lineno">  62 </span>        
 <span class="lineno">  63 </span>        <span class="comment">// Show flag information</span>
 <span class="lineno">  64 </span>        String value = Integer.toHexString(FlagContent.INSTANCE.getFlag());
-<span class="caretline"><span class="lineno">  65 </span>        mText_flag_info.setText(<span class="warning"><span class="string">"Flag value: "</span></span> + value);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  65 </span>        mText_flag_info.setText(<span class="warning"><span class="string">"Flag value: 0x"</span></span> + value);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  66 </span>    }
 <span class="lineno">  67 </span>    
 <span class="lineno">  68 </span>    <span class="javadoc">/**
@@ -885,33 +885,33 @@ Dismiss</button>            </div>
 <span class="lineno"> 50 </span>
 <span class="lineno"> 51 </span>    <span class="tag">&lt;TextView</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:59</span>: <span class="message">Hardcoded string "Activity Info:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"20dp"</span>
-<span class="lineno"> 57 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"137dp"</span>
-<span class="lineno"> 58 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/text_task_id"</span>
-<span class="caretline"><span class="lineno"> 59 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Activity Info:"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 60 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
-<span class="lineno"> 61 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:57</span>: <span class="message">Hardcoded string "Activity Info:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/text_task_id"</span>
+<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"10dp"</span>
+<span class="caretline"><span class="lineno"> 57 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Activity Info:"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 58 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
+<span class="lineno"> 59 </span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:71</span>: <span class="message">Hardcoded string "Config intent flag", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
-<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
-<span class="lineno"> 70 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onConfigFlag"</span>
-<span class="caretline"><span class="lineno"> 71 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Config intent flag"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 72 </span>
-<span class="lineno"> 73 </span>    <span class="tag">&lt;Button</span><span class="attribute">
-</span><span class="lineno"> 74 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_next"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:69</span>: <span class="message">Hardcoded string "Config intent flag", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onConfigFlag"</span>
+<span class="caretline"><span class="lineno"> 69 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Config intent flag"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 70 </span>
+<span class="lineno"> 71 </span>    <span class="tag">&lt;Button</span><span class="attribute">
+</span><span class="lineno"> 72 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_next"</span></pre>
 
 <button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 18 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:82</span>: <span class="message">Hardcoded string "Next", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
-<span class="lineno"> 80 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/button_intent_flag"</span>
-<span class="lineno"> 81 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span>
-<span class="caretline"><span class="lineno"> 82 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Next"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 83 </span>
-<span class="lineno"> 84 </span><span class="tag">&lt;/RelativeLayout></span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:80</span>: <span class="message">Hardcoded string "Next", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
+<span class="lineno"> 78 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/button_intent_flag"</span>
+<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span>
+<span class="caretline"><span class="lineno"> 80 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Next"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 81 </span>
+<span class="lineno"> 82 </span><span class="tag">&lt;/RelativeLayout></span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:23</span>: <span class="message">Hardcoded string "Standard", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"fill_parent"</span>
@@ -1148,52 +1148,42 @@ Dismiss</button>            </div>
 <span class="lineno"> 49 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:57</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="137dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:56</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 <span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/text_content_info"</span>
-<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"20dp"</span>
-<span class="caretline"><span class="lineno"> 57 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"137dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 58 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/text_task_id"</span>
-<span class="lineno"> 59 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Activity Info:"</span>
-<span class="lineno"> 60 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
+<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/text_task_id"</span>
+<span class="caretline"><span class="lineno"> 56 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 57 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Activity Info:"</span>
+<span class="lineno"> 58 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 6 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 5 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:58</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@+id/text_task_id"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/text_content_info"</span>
-<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"20dp"</span>
-<span class="lineno"> 57 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"137dp"</span>
-<span class="caretline"><span class="lineno"> 58 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@+id/text_task_id"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 59 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Activity Info:"</span>
-<span class="lineno"> 60 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"24sp"</span> />
-</pre>
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:65</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="5dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 62 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_intent_flag"</span>
+<span class="lineno"> 63 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 64 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 65 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"5dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onConfigFlag"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:67</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="5dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 64 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_intent_flag"</span>
-<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 67 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"5dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
-<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
-<span class="lineno"> 70 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onConfigFlag"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:76</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 73 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 74 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 75 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 76 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
+<span class="lineno"> 78 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/button_intent_flag"</span>
+<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:78</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 75 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 76 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 78 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
-<span class="lineno"> 80 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/button_intent_flag"</span>
-<span class="lineno"> 81 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:80</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@+id/button_intent_flag"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
-<span class="lineno"> 78 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
-<span class="caretline"><span class="lineno"> 80 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@+id/button_intent_flag"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 81 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span>
-<span class="lineno"> 82 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Next"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_demo.xml">../../src/main/res/layout/activity_demo.xml</a>:78</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@+id/button_intent_flag"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 75 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno"> 76 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"5dp"</span>
+<span class="caretline"><span class="lineno"> 78 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@+id/button_intent_flag"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 79 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"onNext"</span>
+<span class="lineno"> 80 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Next"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/checkbox_layout.xml">../../src/main/res/layout/checkbox_layout.xml</a>:102</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">

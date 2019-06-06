@@ -62,7 +62,7 @@ public class IntentFlagSetAct extends Activity {
     	
     	// Show flag information
     	String value = Integer.toHexString(FlagContent.INSTANCE.getFlag());
-    	mText_flag_info.setText("Flag value: " + value);
+    	mText_flag_info.setText("Flag value: 0x" + value);
     }
 	
     /**

@@ -40,6 +40,7 @@ public abstract class Utils {
 	 * @return
 	 */
 	public static int getTaskId(Activity activity) {
+
 		return activity.getTaskId();
 	}
 
@@ -49,7 +50,8 @@ public abstract class Utils {
 	 * @return
 	 */
 	public static String getActivityInfo(Activity activity) {
-		return activity.toString();
+
+		return activity.getLocalClassName();
 	}
 
 }

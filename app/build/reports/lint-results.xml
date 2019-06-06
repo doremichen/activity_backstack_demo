@@ -233,8 +233,8 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="http://developer.android.com/guide/topics/resources/localization.html"
         urls="http://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = &quot; + strFlag);"
-        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = 0x&quot; + strFlag);"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
             line="55"
@@ -251,7 +251,7 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="http://developer.android.com/guide/topics/resources/localization.html"
         urls="http://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = &quot; + strFlag);"
+        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = 0x&quot; + strFlag);"
         errorLine2="                       ~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
@@ -269,8 +269,8 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="http://developer.android.com/guide/topics/resources/localization.html"
         urls="http://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = &quot; + strFlag);"
-        errorLine2="                                                  ~~~~~~~~~~~~~~~~">
+        errorLine1="  mText_taskId.setText(&quot;Task Id: &quot; + onTaskId() + &quot; intent flg = 0x&quot; + strFlag);"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
             line="55"
@@ -323,8 +323,8 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="http://developer.android.com/guide/topics/resources/localization.html"
         urls="http://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="     mText_flag_info.setText(&quot;Flag value: &quot; + value);"
-        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="     mText_flag_info.setText(&quot;Flag value: 0x&quot; + value);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\IntentFlagSetAct.java"
             line="65"
@@ -341,8 +341,8 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="http://developer.android.com/guide/topics/resources/localization.html"
         urls="http://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="     mText_flag_info.setText(&quot;Flag value: &quot; + value);"
-        errorLine2="                             ~~~~~~~~~~~~~~">
+        errorLine1="     mText_flag_info.setText(&quot;Flag value: 0x&quot; + value);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\IntentFlagSetAct.java"
             line="65"
@@ -481,7 +481,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="59"
+            line="57"
             column="9"/>
     </issue>
 
@@ -497,7 +497,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="71"
+            line="69"
             column="9"/>
     </issue>
 
@@ -513,7 +513,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="82"
+            line="80"
             column="9"/>
     </issue>
 
@@ -856,32 +856,16 @@
     <issue
         id="RtlHardcoded"
         severity="Warning"
-        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;137dp&quot;` to better support right-to-left layouts"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
         category="Internationalization:Bidirectional Text"
         priority="5"
         summary="Using left/right instead of start/end attributes"
         explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_marginLeft=&quot;137dp&quot;"
+        errorLine1="        android:layout_marginLeft=&quot;10dp&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="57"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider replacing `android:layout_toRightOf` with `android:layout_toEndOf=&quot;@+id/text_task_id&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_toRightOf=&quot;@+id/text_task_id&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="58"
+            line="56"
             column="9"/>
     </issue>
 
@@ -897,7 +881,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="67"
+            line="65"
             column="9"/>
     </issue>
 
@@ -913,7 +897,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="78"
+            line="76"
             column="9"/>
     </issue>
 
@@ -929,7 +913,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\res\layout\activity_demo.xml"
-            line="80"
+            line="78"
             column="9"/>
     </issue>
 

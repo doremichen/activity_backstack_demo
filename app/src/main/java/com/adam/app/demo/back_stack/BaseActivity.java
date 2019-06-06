@@ -52,7 +52,7 @@ public abstract class BaseActivity extends Activity {
 		int flag = FlagContent.INSTANCE.getFlag();
 		String strFlag = Integer.toHexString(flag);
 		
-		mText_taskId.setText("Task Id: " + onTaskId() + " intent flg = " + strFlag);
+		mText_taskId.setText("Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
 		mText_actIns.setText("Activity Instance: " + onActivityIns());
 		
 		// reset intent flag
@@ -74,7 +74,7 @@ public abstract class BaseActivity extends Activity {
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		Utils.Info(this, "[onNewIntent] enter");
+		Utils.showToast(this, "[onNewIntent] enter");
 	}
 
 
