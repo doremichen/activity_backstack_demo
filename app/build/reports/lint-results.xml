@@ -237,7 +237,7 @@
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
-            line="55"
+            line="60"
             column="24"/>
     </issue>
 
@@ -255,7 +255,7 @@
         errorLine2="                       ~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
-            line="55"
+            line="60"
             column="24"/>
     </issue>
 
@@ -273,7 +273,7 @@
         errorLine2="                                                  ~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
-            line="55"
+            line="60"
             column="51"/>
     </issue>
 
@@ -291,7 +291,7 @@
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
-            line="56"
+            line="61"
             column="24"/>
     </issue>
 
@@ -309,7 +309,7 @@
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\java\com\adam\app\demo\back_stack\BaseActivity.java"
-            line="56"
+            line="61"
             column="24"/>
     </issue>
 

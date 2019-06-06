@@ -4,10 +4,15 @@
 package com.adam.app.demo.back_stack;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -57,15 +62,27 @@ public abstract class BaseActivity extends Activity {
 		
 		// reset intent flag
 		FlagContent.INSTANCE.initFlag();
-		
+
+
 	}
 	
-	
-	
+
 	@Override
 	protected void onResume() {
 		super.onResume();
 		Utils.Info(this, "[onResume] enter");
+
+		// Show info dialog
+		AlertDialog dialog = new AlertDialog.Builder(this).create();
+		dialog.setTitle("Info:");
+		dialog.setMessage(getTaskInfo());
+		dialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+		dialog.show();
 
 	}
 
@@ -92,6 +109,7 @@ public abstract class BaseActivity extends Activity {
 	 * @param v
 	 */
 	public void onNext(View v) {
+		Utils.Info(this, "[onNext] +++");
 		String input = mEdit.getText().toString();
 
 		if (sMap.containsKey(input)) {
@@ -103,6 +121,7 @@ public abstract class BaseActivity extends Activity {
 		} else {
 			Utils.showToast(this, "No activity to go");
 		}
+		Utils.Info(this, "[onNext] ---");
 	}
 	
 
@@ -121,6 +140,31 @@ public abstract class BaseActivity extends Activity {
 		}
 		
 		return true;
+	}
+
+
+	private String getTaskInfo() {
+		Utils.Info(this, "[getTaskInfo] +++");
+		StringBuilder stb = new StringBuilder("");
+		ActivityManager am = (ActivityManager)this.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.AppTask> tasks = am.getAppTasks();
+
+        Utils.Info(this, "task size = " + tasks.size());
+
+		final ActivityManager.AppTask appTask = tasks.get(0);
+		final ActivityManager.RecentTaskInfo taskInfo = appTask.getTaskInfo();
+
+		stb.append("Task num: ").append(tasks.size()-1).append("\n");
+		stb.append("Task Id: ").append(taskInfo.id).append("\n");
+		stb.append("Activity num: ").append(taskInfo.numActivities).append("\n");
+		stb.append("Top Activity: ").append(taskInfo.topActivity.getShortClassName()).append("\n");
+		stb.append("Base Activity: ").append(taskInfo.baseActivity.getShortClassName()).append("\n");
+		stb.append("Orig Activity: ").append(taskInfo.origActivity).append("\n");
+
+		String info = stb.toString();
+
+		Utils.Info(this, "[getTaskInfo] ---");
+		return info;
 	}
 
 
