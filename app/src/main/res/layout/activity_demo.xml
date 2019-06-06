@@ -1,73 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_next_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_content_info"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="55dp"
+        android:text="Next Activity"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edit_next_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_content_info"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="55dp"
+        android:layout_toRightOf="@+id/text_next_class"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/text_content_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="This is back stack demo. You can just only input the A, B, C, D four character as the activity name."
+        android:textSize="24sp"
+        />
 
     <TextView
         android:id="@+id/text_task_id"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/text_content_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:text="Task ID:"
-        android:textSize="12sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/text_act_ins"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity Info::"
-        android:textSize="12sp" />
+        android:layout_below="@+id/text_content_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="137dp"
+        android:layout_toRightOf="@+id/text_task_id"
+        android:text="Activity Info:"
+        android:textSize="24sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/text_next_class"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next Activity" />
-
-        <EditText
-            android:id="@+id/edit_next_class"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10" >
-
-            <requestFocus />
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.17"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/text_content_info"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="This is back stack demo. You can just only input the A, B, C, D four character as the activity name." />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/button_intent_flag"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
         android:onClick="onConfigFlag"
         android:text="Config intent flag" />
 
     <Button
         android:id="@+id/button_next"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/button_intent_flag"
         android:onClick="onNext"
         android:text="Next" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -3,6 +3,6 @@
 
     <string name="app_name">ActivityBackStackDemo</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="label_exit">Exit</string>
 
 </resources>

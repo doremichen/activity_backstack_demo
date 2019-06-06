@@ -1046,13 +1046,13 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_exit
 id action_image
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1382,7 +1382,6 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -1392,6 +1391,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hello_world
 string hide_bottom_view_on_scroll_behavior
+string label_exit
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
 string path_password_eye
