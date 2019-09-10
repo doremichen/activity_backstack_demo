@@ -39,8 +39,7 @@
         </activity>
         <activity
             android:name="com.adam.app.demo.back_stack.SingleTaskAct"
-            android:launchMode="singleTask"
-            android:taskAffinity="com.adam.app.back_stack.one" >
+            android:launchMode="singleTask" >
         </activity>
         <activity
             android:name="com.adam.app.demo.back_stack.SingleInstanceAct"

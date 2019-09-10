@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
 MERGED from [com.android.support:design:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\8623d82089c4e8a0bbe5e7315267f5c8\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\da5c889d2beffdde2439abb9bd0a54f6\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\30fccccc38edf5ef777c213218e502fe\AndroidManifest.xml:2:1-11:12
@@ -44,9 +44,9 @@ MERGED from [com.android.support:documentfile:28.0.0-rc02] C:\Users\adamchen.000
 MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\12b43acd7f85068500fa0d8af3da090f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\1553ad286083696579939bca633e215d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\8bac4415cf29f965b90a7b668259328a\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml
@@ -62,7 +62,7 @@ INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\Andr
 		INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:7:5-48:19
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:7:5-47:19
 MERGED from [com.android.support:design:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\8623d82089c4e8a0bbe5e7315267f5c8\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0-rc02] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\8623d82089c4e8a0bbe5e7315267f5c8\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\adamchen.000\.gradle\caches\transforms-2\files-2.1\30fccccc38edf5ef777c213218e502fe\AndroidManifest.xml:9:5-20
@@ -118,39 +118,37 @@ ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\Android
 	android:name
 		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:26:13-40
 activity#com.adam.app.demo.back_stack.SingleTaskAct
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:29:9-33:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:29:9-32:20
 	android:launchMode
 		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:31:13-44
-	android:taskAffinity
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:32:13-63
 	android:name
 		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:30:13-41
 activity#com.adam.app.demo.back_stack.SingleInstanceAct
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:34:9-37:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:launchMode
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:36:13-48
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:35:13-48
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:35:13-45
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:34:13-45
 activity#com.adam.app.demo.back_stack.IntentFlagSetAct
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:38:9-39:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:37:9-38:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:38:19-50
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:37:19-50
 activity#com.adam.app.demo.back_stack.A
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:40:9-41:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:39:9-40:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:40:19-35
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:39:19-35
 activity#com.adam.app.demo.back_stack.B
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:42:9-43:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:41:9-42:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:42:19-35
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:41:19-35
 activity#com.adam.app.demo.back_stack.C
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:44:9-45:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:43:9-44:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:44:19-35
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:43:19-35
 activity#com.adam.app.demo.back_stack.D
-ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:46:9-47:20
+ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:45:9-46:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:46:19-35
+		ADDED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml:45:19-35
 uses-sdk
 INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudioProjects\activity_backstack_demo\app\src\main\AndroidManifest.xml

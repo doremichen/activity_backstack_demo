@@ -2690,9 +2690,9 @@
                     "from": {
                         "startLines": "3,4,5",
                         "startColumns": "4,4,4",
-                        "startOffsets": "56,115,168",
+                        "startOffsets": "59,119,173",
                         "endColumns": "58,52,43",
-                        "endOffsets": "110,163,207"
+                        "endOffsets": "113,167,212"
                     },
                     "to": {
                         "startLines": "573,580,582",
