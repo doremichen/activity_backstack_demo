@@ -53,19 +53,23 @@ public abstract class BaseActivity extends Activity {
 		mText_actIns = (TextView)this.findViewById(R.id.text_act_ins);
 		
 		mEdit = (EditText)this.findViewById(R.id.edit_next_class);
-		
-		int flag = FlagContent.INSTANCE.getFlag();
-		String strFlag = Integer.toHexString(flag);
-		
-		mText_taskId.setText("Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
-		mText_actIns.setText("Activity Instance: " + onActivityIns());
-		
+
+		updateInfo();
+
 		// reset intent flag
 		FlagContent.INSTANCE.initFlag();
 
 
 	}
-	
+
+	private void updateInfo() {
+		int flag = FlagContent.INSTANCE.getFlag();
+		String strFlag = Integer.toHexString(flag);
+
+		mText_taskId.setText("Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
+		mText_actIns.setText("Activity Instance: " + onActivityIns());
+	}
+
 
 	@Override
 	protected void onResume() {
@@ -84,6 +88,7 @@ public abstract class BaseActivity extends Activity {
 				});
 		dialog.show();
 
+		updateInfo();
 	}
 
 
@@ -116,7 +121,9 @@ public abstract class BaseActivity extends Activity {
 			Class<?> nextAct = sMap.get(input);
 
 			Intent intent = new Intent(this, nextAct);
-			intent.addFlags(FlagContent.INSTANCE.getFlag());
+			if (FlagContent.INSTANCE.getFlag() != 0) {
+				intent.addFlags(FlagContent.INSTANCE.getFlag());
+			}
 			this.startActivity(intent);
 		} else {
 			Utils.showToast(this, "No activity to go");

@@ -38,7 +38,8 @@
         </activity>
         <activity android:name="A" >
         </activity>
-        <activity android:name="B" >
+        <activity android:name="B"
+            android:taskAffinity="adam.task">
         </activity>
         <activity android:name="C" >
         </activity>

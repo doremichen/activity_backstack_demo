@@ -26,6 +26,14 @@
         android:orientation="vertical">
 
         <CheckBox
+            android:id="@+id/checkBox_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="Clear flag" />
+
+
+        <CheckBox
             android:id="@+id/checkBox_new_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

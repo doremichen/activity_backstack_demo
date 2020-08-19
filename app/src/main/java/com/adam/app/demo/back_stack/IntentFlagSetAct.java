@@ -28,6 +28,7 @@ public class IntentFlagSetAct extends Activity {
 	
 	// Create mapping table
 	static {
+		sMap.put(R.id.checkBox_clear, ItemClickType.CHECKBOX_CLEAR);
 		sMap.put(R.id.checkBox_new_task, ItemClickType.CHECKBOX_NEW_TASK);
 		sMap.put(R.id.checkBox_clear_top, ItemClickType.CHECKBOX_CLEAR_TOP);
 		sMap.put(R.id.checkBox_clear_task, ItemClickType.CHECKBOX_CLEAR_TASK);
@@ -84,7 +85,15 @@ public class IntentFlagSetAct extends Activity {
      *
      */
     enum ItemClickType {
-    	
+
+    	CHECKBOX_CLEAR {
+			@Override
+			void process(boolean isChecked) {
+				Utils.Info(this, "[process] enter isChecked = " + isChecked);
+				FlagContent.INSTANCE.initFlag();
+			}
+		},
+
     	CHECKBOX_NEW_TASK {
 
 			@Override

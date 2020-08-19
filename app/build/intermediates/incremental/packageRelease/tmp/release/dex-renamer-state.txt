@@ -1,4 +1,0 @@
-#Tue Sep 10 15:53:30 CST 2019
-base.0=D\:\\AndroidStudioProjects\\activity_backstack_demo\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-path.0=classes.dex
-renamed.0=classes.dex
