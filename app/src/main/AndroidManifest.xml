@@ -2,16 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adam.app.demo.back_stack"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,31 +21,36 @@
         </activity>
         <activity
             android:name="StandardAct"
-            android:launchMode="standard" >
-        </activity>
+            android:exported="false"
+            android:launchMode="standard" />
         <activity
             android:name="SingleTopAct"
-            android:launchMode="singleTop" >
-        </activity>
+            android:exported="false"
+            android:launchMode="singleTop" />
         <activity
             android:name="SingleTaskAct"
-            android:launchMode="singleTask">
-        </activity>
+            android:exported="false"
+            android:launchMode="singleTask" />
         <activity
             android:name="SingleInstanceAct"
-            android:launchMode="singleInstance" >
-        </activity>
-        <activity android:name="IntentFlagSetAct" >
-        </activity>
-        <activity android:name="A" >
-        </activity>
-        <activity android:name="B"
-            android:taskAffinity="adam.task">
-        </activity>
-        <activity android:name="C" >
-        </activity>
-        <activity android:name="D" >
-        </activity>
+            android:exported="false"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="IntentFlagSetAct"
+            android:exported="false" />
+        <activity
+            android:name="A"
+            android:exported="false" />
+        <activity
+            android:name="B"
+            android:exported="false"
+            android:taskAffinity="adam.task" />
+        <activity
+            android:name="C"
+            android:exported="false" />
+        <activity
+            android:name="D"
+            android:exported="false" />
     </application>
 
 </manifest>

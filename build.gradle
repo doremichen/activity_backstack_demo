@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
@@ -18,11 +18,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-ext {
-    workingVersion = '1.0.0-alpha10'
-    roomVersion = '1.1.1'
-    archLifecycleVersion = '1.1.1'
-    glide = "4.8.0"
 }
