@@ -119,8 +119,9 @@ public abstract class BaseActivity extends Activity {
 
             Intent intent = new Intent(this, nextAct);
             // add flag
-            if (FlagContent.INSTANCE.getFlag() != 0) {
-                intent.addFlags(FlagContent.INSTANCE.getFlag());
+            int flag = FlagContent.INSTANCE.getFlag();
+            if (flag != 0) {
+                intent.addFlags(flag);
             }
 
             this.startActivity(intent);
@@ -139,11 +140,13 @@ public abstract class BaseActivity extends Activity {
 
         // Hide the softkey board
         View view = this.getCurrentFocus();
-
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        if (view == null) {
+            Utils.showToast(this, "Invalid view!!!");
+            return false;
         }
+
+        InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
         return true;
     }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.adam.app.demo.back_stack;
 
@@ -9,18 +9,18 @@ import android.widget.TextView;
 
 /**
  * @author AdamChen
- * 
+ *
  */
 public class StandardAct extends Activity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		this.setContentView(R.layout.task_layout);
+        this.setContentView(R.layout.task_layout);
 
-		TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
-		text_view.setText("This activity is launched by  Satndard ");
-	}
+        TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
+        text_view.setText("This activity is launched by  Standard ");
+    }
 
 }

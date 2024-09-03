@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.adam.app.demo.back_stack;
 
@@ -12,15 +12,15 @@ import android.widget.TextView;
  *
  */
 public class SingleTopAct extends Activity {
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 
-		this.setContentView(R.layout.task_layout);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
-		text_view.setText("This activity is launched by  Single top ");
-	}
+        this.setContentView(R.layout.task_layout);
+
+        TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
+        text_view.setText("This activity is launched by  Single top ");
+    }
 
 }

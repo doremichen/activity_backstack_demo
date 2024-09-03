@@ -37,39 +37,28 @@ public class MainActivity extends Activity {
     }
 
     public void onLaunchStandardActivity(View v) {
-
         Intent it = new Intent(this, StandardAct.class);
         this.startActivity(it);
-
-
     }
 
     public void onLaunchSingleTopActivity(View v) {
-
         Intent it = new Intent(this, SingleTopAct.class);
         this.startActivity(it);
     }
 
     public void onLaunchSingleTaskActivity(View v) {
-
         Intent it = new Intent(this, SingleTaskAct.class);
         this.startActivity(it);
-
     }
 
     public void onLaunchSingleInstanceActivity(View v) {
-
         Intent it = new Intent(this, SingleInstanceAct.class);
         this.startActivity(it);
-
     }
 
     public void onLaunchDemoActivity(View v) {
-
         Utils.showToast(this, "[Start Demo...]");
-
         Intent intent = new Intent(this, A.class);
-
         this.startActivity(intent);
 
     }
