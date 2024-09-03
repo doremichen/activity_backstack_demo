@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.adam.app.demo.back_stack;
 
@@ -10,14 +10,14 @@ package com.adam.app.demo.back_stack;
  */
 public class D extends BaseActivity {
 
-	@Override
-	int onTaskId() {
-		return Utils.getTaskId(this);
-	}
+    @Override
+    int onTaskId() {
+        return Utils.getTaskId(this);
+    }
 
-	@Override
-	String onActivityIns() {
-		return Utils.getActivityInfo(this);
-	}
-	
+    @Override
+    String onActivityIns() {
+        return Utils.getActivityInfo(this);
+    }
+
 }

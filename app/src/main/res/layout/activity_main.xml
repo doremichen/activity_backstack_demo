@@ -19,35 +19,35 @@
         android:id="@+id/button_next"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLaunchStd"
+        android:onClick="onLaunchStandardActivity"
         android:text="Standard" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLaunchSTOP"
+        android:onClick="onLaunchSingleTopActivity"
         android:text="SingleTop" />
     
     <Button
         android:id="@+id/button3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLaunchSTSK"
+        android:onClick="onLaunchSingleTaskActivity"
         android:text="SingleTask" />
     
     <Button
         android:id="@+id/button4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLaunchInst"
+        android:onClick="onLaunchSingleInstanceActivity"
         android:text="SingleInstance" />
     
     <Button
         android:id="@+id/button5"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLaunch"
+        android:onClick="onLaunchDemoActivity"
         android:text="Intent flag demo" />
     
     
