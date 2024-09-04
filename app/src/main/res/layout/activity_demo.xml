@@ -76,7 +76,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="5dp"
         android:layout_toRightOf="@+id/button_intent_flag"
-        android:onClick="onNext"
+        android:onClick="onNavigateToNextActivity"
         android:text="Next" />
 
 </RelativeLayout>

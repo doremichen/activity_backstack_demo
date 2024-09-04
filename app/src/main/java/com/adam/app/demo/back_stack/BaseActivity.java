@@ -108,25 +108,26 @@ public abstract class BaseActivity extends Activity {
     /**
      * Starts the next activity based on user input.
      *
-     * @param v The view that triggered this method.
+     * @param view The view that triggered this method.
      */
-    public void onNext(View v) {
+    public void onNavigateToNextActivity(View view) {
         Utils.Info(this, "[onNext] +++");
-        String input = mEditNextClass.getText().toString();
+        String targetActivityInput = mEditNextClass.getText().toString();
 
-        if (ACTIVITY_MAP.containsKey(input)) {
-            Class<?> nextAct = ACTIVITY_MAP.get(input);
+        Class<?> nextActivityClass = ACTIVITY_MAP.get(targetActivityInput);
 
-            Intent intent = new Intent(this, nextAct);
-            // add flag
-            int flag = FlagContent.INSTANCE.getFlag();
-            if (flag != 0) {
-                intent.addFlags(flag);
+        if (nextActivityClass != null) {
+
+            Intent intent = new Intent(this, nextActivityClass);
+            // add flags
+            int flags = FlagContent.INSTANCE.getFlag();
+            if (flags != 0) {
+                intent.addFlags(flags);
             }
 
             this.startActivity(intent);
         } else {
-            Utils.showToast(this, "No activity to go");
+            Utils.showToast(this, "No activity found for input: " + targetActivityInput);
         }
         Utils.Info(this, "[onNext] ---");
     }
