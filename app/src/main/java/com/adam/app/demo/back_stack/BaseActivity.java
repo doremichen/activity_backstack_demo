@@ -113,22 +113,21 @@ public abstract class BaseActivity extends Activity {
     public void onNavigateToNextActivity(View view) {
         Utils.Info(this, "[onNext] +++");
         String targetActivityInput = mEditNextClass.getText().toString();
-
         Class<?> nextActivityClass = ACTIVITY_MAP.get(targetActivityInput);
 
-        if (nextActivityClass != null) {
-
-            Intent intent = new Intent(this, nextActivityClass);
-            // add flags
-            int flags = FlagContent.INSTANCE.getFlag();
-            if (flags != 0) {
-                intent.addFlags(flags);
-            }
-
-            this.startActivity(intent);
-        } else {
+        if (nextActivityClass == null) {
             Utils.showToast(this, "No activity found for input: " + targetActivityInput);
+            return;
         }
+
+        Intent intent = new Intent(this, nextActivityClass);
+        // add flags
+        int flags = FlagContent.INSTANCE.getFlag();
+        if (flags != 0) {
+            intent.addFlags(flags);
+        }
+
+        this.startActivity(intent);
         Utils.Info(this, "[onNext] ---");
     }
 
