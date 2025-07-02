@@ -1,5 +1,7 @@
 /**
- *
+ * Description: This Utils class defines the tools
+ * Author: Adam Chen
+ * Date: 2026-07-02
  */
 package com.adam.app.demo.back_stack;
 
@@ -9,24 +11,26 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * @author AdamChen
+ * This Utils class defines the tools
  */
 public abstract class Utils {
 
     private static final String TAG = "Demo";
 
     /**
-     * @param obj
-     * @param str
+     * Show info log
+     * @param obj Instance
+     * @param str Log content
      */
-    public static final void Info(Object obj, String str) {
+    public static void Info(Object obj, String str) {
 
         Log.i(TAG, obj.getClass().getSimpleName() + ": " + str);
     }
 
     /**
-     * @param activity
-     * @return
+     * Get task id
+     * @param activity: Activity
+     * @return task id
      */
     public static int getTaskId(Activity activity) {
 
@@ -34,14 +38,20 @@ public abstract class Utils {
     }
 
     /**
-     * @param activity
-     * @return
+     * Get activity info
+     * @param activity: Activity
+     * @return activity info
      */
     public static String getActivityInfo(Activity activity) {
 
         return activity.getLocalClassName();
     }
 
+    /**
+     * Show toast
+     * @param context: Context
+     * @param msg: toast msg
+     */
     public static void showToast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }

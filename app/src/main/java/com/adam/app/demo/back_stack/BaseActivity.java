@@ -1,5 +1,7 @@
 /**
- *
+ * Description: This BaseActivity defines the common functionality for all activities.
+ * Author: Adam Chen
+ * Date: 2026-07-01
  */
 package com.adam.app.demo.back_stack;
 
@@ -7,6 +9,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -48,10 +51,8 @@ public abstract class BaseActivity extends Activity {
         Utils.Info(this, ">>>[onCreate] enter");
         this.setContentView(R.layout.activity_demo);
         // Check permission
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                getOverlayPermission();
-            }
+        if (!Settings.canDrawOverlays(this)) {
+            getOverlayPermission();
         }
 
         mTextTaskId = this.findViewById(R.id.text_task_id);
@@ -71,8 +72,17 @@ public abstract class BaseActivity extends Activity {
         int flag = FlagContent.INSTANCE.getFlag();
         String strFlag = Integer.toHexString(flag);
 
-        mTextTaskId.setText("Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
-        mTextActIns.setText("Activity Instance: " + onActivityIns());
+        updateView(mTextTaskId, "Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
+        updateView(mTextActIns, "Activity Instance: " + onActivityIns());
+    }
+
+    /**
+     * Updates the text view with the provided text.
+     * @param view The TextView to update.
+     * @param text The text to set in the TextView.
+     */
+    private void updateView(TextView view, String text) {
+        view.setText(text);
     }
 
 
@@ -151,7 +161,9 @@ public abstract class BaseActivity extends Activity {
         return true;
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
+    /**
+     * Requests overlay permission if not granted.
+     */
     private void getOverlayPermission() {
         Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
         intent.setData(Uri.parse("package:" + getPackageName()));
@@ -186,6 +198,11 @@ public abstract class BaseActivity extends Activity {
         }
 
 
+        /**
+         * Get task info
+         * @param context context
+         * @return task info
+         */
         private static String getTaskInfo(Context context) {
             Utils.Info(context, "[getTaskInfo] +++");
             StringBuilder taskInfoBuilder = new StringBuilder();
@@ -199,13 +216,7 @@ public abstract class BaseActivity extends Activity {
 
             if (!tasks.isEmpty()) {
                 // Accessing the first task for demonstration. Consider handling multiple tasks if needed.
-                ActivityManager.AppTask appTask = tasks.get(0);
-                ActivityManager.RecentTaskInfo taskInfo = appTask.getTaskInfo();
-
-                taskInfoBuilder.append(TASK_ID).append(taskInfo.id).append("\n");
-                taskInfoBuilder.append(ACTIVITY_NUMBER).append(taskInfo.numActivities).append("\n");
-                taskInfoBuilder.append(TOP_ACTIVITY).append(taskInfo.topActivity.getShortClassName()).append("\n");
-                taskInfoBuilder.append(BASE_ACTIVITY).append(taskInfo.baseActivity.getShortClassName()).append("\n");
+                final ActivityManager.RecentTaskInfo taskInfo = getRecentTaskInfo(tasks, taskInfoBuilder);
                 taskInfoBuilder.append(ORIGINAL_ACTIVITY).append(taskInfo.origActivity).append("\n");
             }
 
@@ -215,6 +226,30 @@ public abstract class BaseActivity extends Activity {
 
             Utils.Info(context, "[getTaskInfo] ---");
             return info;
+        }
+
+        private static ActivityManager.RecentTaskInfo getRecentTaskInfo(List<ActivityManager.AppTask> tasks, StringBuilder taskInfoBuilder) {
+            ActivityManager.AppTask appTask = tasks.get(0);
+            ActivityManager.RecentTaskInfo taskInfo = appTask.getTaskInfo();
+
+            taskInfoBuilder.append(TASK_ID).append(taskInfo.id).append("\n");
+            taskInfoBuilder.append(ACTIVITY_NUMBER).append(taskInfo.numActivities).append("\n");
+            taskInfoBuilder.append(TOP_ACTIVITY).append(getComponentName(taskInfo.topActivity)).append("\n");
+            taskInfoBuilder.append(BASE_ACTIVITY).append(getComponentName(taskInfo.baseActivity)).append("\n");
+            return taskInfo;
+        }
+
+        /**
+         * Get component name
+         * @param componentName component name
+         * @return component short class name
+         */
+        private static String getComponentName(ComponentName componentName) {
+            if (componentName == null) {
+                return "null";
+            }
+
+            return componentName.getShortClassName();
         }
     }
 

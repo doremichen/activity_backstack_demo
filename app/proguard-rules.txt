@@ -1,0 +1,2 @@
+# proguard-rules.txt
+-keep enum com.adam.app.demo.back_stack.FlagContent { *; }
