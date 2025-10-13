@@ -9,6 +9,6 @@
         android:id="@+id/text_task_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="" />
 
 </LinearLayout>

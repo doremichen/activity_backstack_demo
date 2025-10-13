@@ -1,11 +1,12 @@
 /**
+ * Copyright (C) 2025 Adam Chen. All rights reserved.
+ *
  * Description: This BaseActivity defines the common functionality for all activities.
  * Author: Adam Chen
- * Date: 2026-07-01
+ * Date: 2025-10-13
  */
 package com.adam.app.demo.back_stack;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -13,7 +14,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.MotionEvent;
@@ -35,10 +35,10 @@ public abstract class BaseActivity extends Activity {
     // Create activity Map
     private static final Map<String, Class<?>> ACTIVITY_MAP = new HashMap<String, Class<?>>() {
         {
-            put("A", A.class);
-            put("B", B.class);
-            put("C", C.class);
-            put("D", D.class);
+            put(A.class.getSimpleName(), A.class);
+            put(B.class.getSimpleName(), B.class);
+            put(C.class.getSimpleName(), C.class);
+            put(D.class.getSimpleName(), D.class);
         }
     };
     private EditText mEditNextClass;
@@ -78,6 +78,7 @@ public abstract class BaseActivity extends Activity {
 
     /**
      * Updates the text view with the provided text.
+     *
      * @param view The TextView to update.
      * @param text The text to set in the TextView.
      */
@@ -200,6 +201,7 @@ public abstract class BaseActivity extends Activity {
 
         /**
          * Get task info
+         *
          * @param context context
          * @return task info
          */
@@ -241,6 +243,7 @@ public abstract class BaseActivity extends Activity {
 
         /**
          * Get component name
+         *
          * @param componentName component name
          * @return component short class name
          */

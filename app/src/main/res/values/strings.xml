@@ -4,5 +4,16 @@
     <string name="app_name">ActivityBackStackDemo</string>
     <string name="hello_world">Hello world!</string>
     <string name="label_exit">Exit</string>
+    <string name="demo_backstack_instruction">This is a back stack demo. You can only input A, B, C, or D as the activity name.</string>
+    <string name="demo_backstack_input_label">Next Activity:</string>
+    <string name="demo_backstack_et_hint">Enter A / B / C / D</string>
+    <string name="demo_backstack_show_task_id">Task ID:</string>
+    <string name="demo_backstack_show_act_info">Activity Info:</string>
+    <string name="demo_backstack_config_btn">Config Intent Flag</string>
+    <string name="demo_backstack_next_btn">Next</string>
+    <string name="demo_backstack_singleInstance_instruction">"This activity is launched by  Single instance "</string>
+    <string name="demo_backstack_singleTask_instruction">"This activity is launched by  Single Task "</string>
+    <string name="demo_backstack_singleTop_instruction">"This activity is launched by  Single top "</string>
+    <string name="demo_backstack_standard_instruction">"This activity is launched by  Standard "</string>
 
 </resources>

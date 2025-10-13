@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -46,6 +46,10 @@
             android:name="B"
             android:exported="false"
             android:taskAffinity="adam.task" />
+        <!--
+            This attribute is valid when the caller stativity use the FLAG_ACTIVITY_NEW_TASK to start the activity
+            or assign the launchMode to singleTask or singleInstance
+        -->
         <activity
             android:name="C"
             android:exported="false" />

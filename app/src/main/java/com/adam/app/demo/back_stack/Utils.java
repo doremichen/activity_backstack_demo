@@ -1,7 +1,9 @@
 /**
- * Description: This Utils class defines the tools
+ * Copyright (C) 2025 Adam Chen. All rights reserved.
+ *
+ * Description: This class is used to define the tools
  * Author: Adam Chen
- * Date: 2026-07-02
+ * Date: 2025-10-13
  */
 package com.adam.app.demo.back_stack;
 

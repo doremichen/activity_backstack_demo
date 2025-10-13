@@ -1,5 +1,9 @@
 /**
+ * Copyright (C) 2025 Adam Chen. All rights reserved.
  *
+ * Description: This class is the single task activity.
+ * Author: Adam Chen
+ * Date: 2025-10-13
  */
 package com.adam.app.demo.back_stack;
 
@@ -20,7 +24,7 @@ public class SingleTaskAct extends Activity {
         this.setContentView(R.layout.task_layout);
 
         TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
-        text_view.setText("This activity is launched by  Single Task ");
+        text_view.setText(getString(R.string.demo_backstack_singleTask_instruction));
     }
 
 }

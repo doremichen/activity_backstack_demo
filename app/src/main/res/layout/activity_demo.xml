@@ -7,12 +7,12 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-    <!-- 說明內容 -->
+    <!-- Description -->
     <TextView
         android:id="@+id/text_content_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="This is a back stack demo. You can only input A, B, C, or D as the activity name."
+        android:text="@string/demo_backstack_instruction"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:gravity="center"
@@ -22,60 +22,60 @@
         android:layout_marginBottom="16dp"
         android:layout_marginTop="20dp" />
 
-    <!-- 輸入欄位標籤 -->
+    <!-- Input -->
     <TextView
         android:id="@+id/text_next_class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Activity:"
+        android:text="@string/demo_backstack_input_label"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/text_content_info"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- 輸入欄位 -->
+    <!-- edit -->
     <EditText
         android:id="@+id/edit_next_class"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter A / B / C / D"
+        android:hint="@string/demo_backstack_et_hint"
         android:inputType="textCapCharacters"
         app:layout_constraintStart_toEndOf="@id/text_next_class"
         app:layout_constraintTop_toTopOf="@id/text_next_class"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp" />
 
-    <!-- 顯示 Task ID -->
+    <!-- show Task ID -->
     <TextView
         android:id="@+id/text_task_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Task ID:"
+        android:text="@string/demo_backstack_show_task_id"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/edit_next_class"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- 顯示 Activity instance 資訊 -->
+    <!-- Show Activity instance Info -->
     <TextView
         android:id="@+id/text_act_ins"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Activity Info:"
+        android:text="@string/demo_backstack_show_act_info"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/text_task_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp" />
 
-    <!-- Config intent flag 按鈕 -->
+    <!-- Config intent flag Button -->
     <Button
         android:id="@+id/button_intent_flag"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Config Intent Flag"
+        android:text="@string/demo_backstack_config_btn"
         android:onClick="onConfigFlag"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +83,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp" />
 
-    <!-- Next 按鈕 -->
+    <!-- Next Button-->
     <Button
         android:id="@+id/button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/demo_backstack_next_btn"
         android:onClick="onNavigateToNextActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
