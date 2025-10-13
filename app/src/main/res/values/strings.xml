@@ -15,5 +15,11 @@
     <string name="demo_backstack_singleTask_instruction">"This activity is launched by  Single Task "</string>
     <string name="demo_backstack_singleTop_instruction">"This activity is launched by  Single top "</string>
     <string name="demo_backstack_standard_instruction">"This activity is launched by  Standard "</string>
+    <string name="demo_backstack_intent_flag_btn">Intent Flag Demo</string>
+    <string name="demo_backstack_standard_btn">Standard</string>
+    <string name="demo_backstack_singletop_btn">SingleTop</string>
+    <string name="demo_backstack_singletask_btn">SingleTask</string>
+    <string name="demo_backstack_singleinstance_btn">SingleInstance</string>
+    <string name="demo_backstack_title">Activity Launch Modes</string>
 
 </resources>
