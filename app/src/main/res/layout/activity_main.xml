@@ -9,6 +9,20 @@
     android:padding="24dp"
     tools:context=".MainActivity">
 
+    <!-- Toolbar (for menu) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:background="?attr/colorPrimaryVariant"
+        android:gravity="center"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/ToolbarTitleTextStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <!-- Title -->
     <TextView
         android:id="@+id/text_title"
@@ -20,9 +34,10 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="#1E293B"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp" />
 
     <!-- Card container -->
@@ -43,10 +58,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
-            <!-- standard Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_next"
                 android:layout_width="match_parent"
@@ -55,9 +68,8 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
-                app:strokeColor="#CBD5E1"
-                app:strokeWidth="2dp"
                 app:cornerRadius="12dp"
+                app:backgroundTint="#3B82F6"
                 android:onClick="onLaunchStandardActivity"
                 android:layout_marginBottom="12dp" />
 
@@ -69,9 +81,8 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
-                app:strokeColor="#CBD5E1"
-                app:strokeWidth="2dp"
                 app:cornerRadius="12dp"
+                app:backgroundTint="#6366F1"
                 android:onClick="onLaunchSingleTopActivity"
                 android:layout_marginBottom="12dp" />
 
@@ -83,9 +94,8 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
-                app:strokeColor="#CBD5E1"
-                app:strokeWidth="2dp"
                 app:cornerRadius="12dp"
+                app:backgroundTint="#10B981"
                 android:onClick="onLaunchSingleTaskActivity"
                 android:layout_marginBottom="12dp" />
 
@@ -97,9 +107,8 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
-                app:strokeColor="#CBD5E1"
-                app:strokeWidth="2dp"
                 app:cornerRadius="12dp"
+                app:backgroundTint="#F59E0B"
                 android:onClick="onLaunchSingleInstanceActivity"
                 android:layout_marginBottom="12dp" />
 
@@ -111,9 +120,8 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif-medium"
-                app:strokeColor="#CBD5E1"
-                app:strokeWidth="2dp"
                 app:cornerRadius="12dp"
+                app:backgroundTint="#EF4444"
                 android:onClick="onLaunchDemoActivity" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

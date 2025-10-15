@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2025 Adam Chen. All rights reserved.
- *
+ * <p>
  * Description: This class is the intent flag setting activity
  * Author: Adam Chen
  * Date: 2025-10-13
@@ -8,12 +8,14 @@
 package com.adam.app.demo.back_stack;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.adam.app.demo.back_stack.databinding.CheckboxLayoutBinding;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +23,10 @@ import java.util.Map;
 /**
  * @author AdamChen
  */
-public class IntentFlagSetAct extends Activity {
+public class IntentFlagSetAct extends AppCompatActivity {
+    // TAG
+    private static final String TAG = "IntentFlagSetAct";
+
 
     // Check box item clicked map
     @SuppressLint("UseSparseArrays")
@@ -39,14 +44,16 @@ public class IntentFlagSetAct extends Activity {
         }
     };
 
-    private TextView mTextFlagInfo;
+    // view binding
+    private CheckboxLayoutBinding mBinding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Utils.Info(this, "[onCreate] enter");
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.checkbox_layout);
-        mTextFlagInfo = this.findViewById(R.id.text_flag_info);
-
+        mBinding = CheckboxLayoutBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
         // initial flag content
         FlagContent.INSTANCE.initFlag();
     }
@@ -65,7 +72,7 @@ public class IntentFlagSetAct extends Activity {
 
         // Show flag information
         String value = Integer.toHexString(FlagContent.INSTANCE.getFlag());
-        mTextFlagInfo.setText("Flag value: 0x" + value);
+        mBinding.textFlagInfo.setText(getString(R.string.demo_backstack_flag_value, value));
     }
 
     /**

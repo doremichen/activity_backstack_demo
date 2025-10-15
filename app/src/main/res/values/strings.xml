@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="label_exit">Exit</string>
     <string name="demo_backstack_instruction">This is a back stack demo. You can only input A, B, C, or D as the activity name.</string>
-    <string name="demo_backstack_input_label">Next Activity:</string>
+    <string name="demo_backstack_input_label">Next Activity: </string>
     <string name="demo_backstack_et_hint">Enter A / B / C / D</string>
     <string name="demo_backstack_show_task_id">Task ID:</string>
     <string name="demo_backstack_show_act_info">Activity Info:</string>
@@ -21,5 +21,18 @@
     <string name="demo_backstack_singletask_btn">SingleTask</string>
     <string name="demo_backstack_singleinstance_btn">SingleInstance</string>
     <string name="demo_backstack_title">Activity Launch Modes</string>
+    <string name="demo_backstack_intent_flag_title">Intent flag</string>
+    <string name="demo_backstack_clear_flag_item">Clear flag</string>
+    <string name="demo_backstack_flag_activity_new_task_item">Flag Activity New Task</string>
+    <string name="demo_backstack_flag_activity_clear_top_item">Flag Activity Clear Top</string>
+    <string name="demo_backstack_flag_activity_clear_task_item">Flag Activity Clear Task</string>
+    <string name="demo_backstack_flag_activity_single_top_item">Flag Activity Single Top</string>
+    <string name="demo_backstack_flag_activity_multiple_task_item">Flag Activity Multiple Task</string>
+    <string name="demo_backstack_flag_activity_brought_to_front_item">Flag Activity Brought to Front</string>
+    <string name="demo_backstack_flag_activity_clear_when_task_reset_item">Flag Activity Clear When Task Reset</string>
+    <string name="demo_backstack_flag_activity_no_animation_item">Flag Activity No Animation</string>
+    <string name="demo_backstack_flag_value_info">Flag value:</string>
+    <string name="demo_backstack_apply_flags_btn">Apply Flags</string>
+    <string name="demo_backstack_flag_value">Flag value: 0x%1$s</string>
 
 </resources>

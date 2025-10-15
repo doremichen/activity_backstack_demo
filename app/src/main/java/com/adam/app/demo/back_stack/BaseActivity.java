@@ -8,23 +8,16 @@
 package com.adam.app.demo.back_stack;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.AlertDialog;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -44,6 +37,7 @@ public abstract class BaseActivity extends Activity {
     private EditText mEditNextClass;
     private TextView mTextTaskId;
     private TextView mTextActIns;
+    private TextView mTextTaskInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +51,8 @@ public abstract class BaseActivity extends Activity {
 
         mTextTaskId = this.findViewById(R.id.text_task_id);
         mTextActIns = this.findViewById(R.id.text_act_ins);
+        // task info
+        mTextTaskInfo = this.findViewById(R.id.text_task_info);
 
         mEditNextClass = this.findViewById(R.id.edit_next_class);
 
@@ -69,11 +65,8 @@ public abstract class BaseActivity extends Activity {
     }
 
     private void updateInfo() {
-        int flag = FlagContent.INSTANCE.getFlag();
-        String strFlag = Integer.toHexString(flag);
-
-        updateView(mTextTaskId, "Task Id: " + onTaskId() + " intent flg = 0x" + strFlag);
-        updateView(mTextActIns, "Activity Instance: " + onActivityIns());
+        updateView(mTextTaskId, "Task Id: " + onTaskId());
+        updateView(mTextActIns, "Activity Info: " + onActivityIns());
     }
 
     /**
@@ -92,8 +85,10 @@ public abstract class BaseActivity extends Activity {
         super.onResume();
         Utils.Info(this, "[onResume] enter");
 
+        mTextTaskInfo.setText(TaskInfoProvider.getTaskInfo(this));
+
         // Show info dialog
-        TaskInfoProvider.showDialog(this.getApplicationContext());
+        //TaskInfoProvider.showDialog(this.getApplicationContext());
 
         updateInfo();
     }
@@ -103,6 +98,8 @@ public abstract class BaseActivity extends Activity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Utils.showToast(this, "[onNewIntent] enter");
+
+        mTextTaskInfo.setText(TaskInfoProvider.getTaskInfo(this));
     }
 
 
@@ -112,6 +109,10 @@ public abstract class BaseActivity extends Activity {
      * @param v The view that triggered this method.
      */
     public void onConfigFlag(View v) {
+
+        // hide keyboard
+        Utils.hideSoftKeyBoard(this);
+
         Intent intent = new Intent(this, IntentFlagSetAct.class);
         this.startActivity(intent);
     }
@@ -130,6 +131,10 @@ public abstract class BaseActivity extends Activity {
             Utils.showToast(this, "No activity found for input: " + targetActivityInput);
             return;
         }
+
+        // hide keyboard
+        if (!Utils.hideSoftKeyBoard(this)) return;
+
 
         Intent intent = new Intent(this, nextActivityClass);
         // add flags
@@ -150,16 +155,7 @@ public abstract class BaseActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
 
         // Hide the softkey board
-        View view = this.getCurrentFocus();
-        if (view == null) {
-            Utils.showToast(this, "Invalid view!!!");
-            return false;
-        }
-
-        InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-
-        return true;
+        return Utils.hideSoftKeyBoard(this);
     }
 
     /**
@@ -176,85 +172,85 @@ public abstract class BaseActivity extends Activity {
 
     abstract String onActivityIns();
 
-    private static class TaskInfoProvider {
-
-        private static final String INFO_TOP = "----- Task Info Start -----";
-        private static final String INFO_BOTTOM = "----- Task Info End -----";
-        private static final String TASK_SIZE = "Task Size: ";
-        private static final String TASK_ID = "Task ID: ";
-        private static final String ACTIVITY_NUMBER = "Number of Activities: ";
-        private static final String TOP_ACTIVITY = "Top Activity: ";
-        private static final String BASE_ACTIVITY = "Base Activity: ";
-        private static final String ORIGINAL_ACTIVITY = "Original Activity: ";
-
-        public static void showDialog(Context context) {
-            AlertDialog dialog = new AlertDialog.Builder(context).create();
-            dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY);
-            dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
-            dialog.setTitle("Info:");
-            dialog.setMessage(getTaskInfo(context));
-            dialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                    (dialog1, which) -> dialog1.dismiss());
-            dialog.show();
-        }
-
-
-        /**
-         * Get task info
-         *
-         * @param context context
-         * @return task info
-         */
-        private static String getTaskInfo(Context context) {
-            Utils.Info(context, "[getTaskInfo] +++");
-            StringBuilder taskInfoBuilder = new StringBuilder();
-            ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-            List<ActivityManager.AppTask> tasks = activityManager.getAppTasks();
-
-            Utils.Info(context, "Task size = " + tasks.size());
-
-            taskInfoBuilder.append(INFO_TOP).append("\n");
-            taskInfoBuilder.append(TASK_SIZE).append(tasks.size()).append("\n");
-
-            if (!tasks.isEmpty()) {
-                // Accessing the first task for demonstration. Consider handling multiple tasks if needed.
-                final ActivityManager.RecentTaskInfo taskInfo = getRecentTaskInfo(tasks, taskInfoBuilder);
-                taskInfoBuilder.append(ORIGINAL_ACTIVITY).append(taskInfo.origActivity).append("\n");
-            }
-
-            taskInfoBuilder.append(INFO_BOTTOM).append("\n");
-
-            String info = taskInfoBuilder.toString();
-
-            Utils.Info(context, "[getTaskInfo] ---");
-            return info;
-        }
-
-        private static ActivityManager.RecentTaskInfo getRecentTaskInfo(List<ActivityManager.AppTask> tasks, StringBuilder taskInfoBuilder) {
-            ActivityManager.AppTask appTask = tasks.get(0);
-            ActivityManager.RecentTaskInfo taskInfo = appTask.getTaskInfo();
-
-            taskInfoBuilder.append(TASK_ID).append(taskInfo.id).append("\n");
-            taskInfoBuilder.append(ACTIVITY_NUMBER).append(taskInfo.numActivities).append("\n");
-            taskInfoBuilder.append(TOP_ACTIVITY).append(getComponentName(taskInfo.topActivity)).append("\n");
-            taskInfoBuilder.append(BASE_ACTIVITY).append(getComponentName(taskInfo.baseActivity)).append("\n");
-            return taskInfo;
-        }
-
-        /**
-         * Get component name
-         *
-         * @param componentName component name
-         * @return component short class name
-         */
-        private static String getComponentName(ComponentName componentName) {
-            if (componentName == null) {
-                return "null";
-            }
-
-            return componentName.getShortClassName();
-        }
-    }
+//    private static class TaskInfoProvider {
+//
+//        private static final String INFO_TOP = "----- Task Info Start -----";
+//        private static final String INFO_BOTTOM = "----- Task Info End -----";
+//        private static final String TASK_SIZE = "Task Size: ";
+//        private static final String TASK_ID = "Task ID: ";
+//        private static final String ACTIVITY_NUMBER = "Number of Activities: ";
+//        private static final String TOP_ACTIVITY = "Top Activity: ";
+//        private static final String BASE_ACTIVITY = "Base Activity: ";
+//        private static final String ORIGINAL_ACTIVITY = "Original Activity: ";
+//
+//        public static void showDialog(Context context) {
+//            AlertDialog dialog = new AlertDialog.Builder(context).create();
+//            dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY);
+//            dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
+//            dialog.setTitle("Info:");
+//            dialog.setMessage(getTaskInfo(context));
+//            dialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+//                    (dialog1, which) -> dialog1.dismiss());
+//            dialog.show();
+//        }
+//
+//
+//        /**
+//         * Get task info
+//         *
+//         * @param context context
+//         * @return task info
+//         */
+//        private static String getTaskInfo(Context context) {
+//            Utils.Info(context, "[getTaskInfo] +++");
+//            StringBuilder taskInfoBuilder = new StringBuilder();
+//            ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+//            List<ActivityManager.AppTask> tasks = activityManager.getAppTasks();
+//
+//            Utils.Info(context, "Task size = " + tasks.size());
+//
+//            taskInfoBuilder.append(INFO_TOP).append("\n");
+//            taskInfoBuilder.append(TASK_SIZE).append(tasks.size()).append("\n");
+//
+//            if (!tasks.isEmpty()) {
+//                // Accessing the first task for demonstration. Consider handling multiple tasks if needed.
+//                final ActivityManager.RecentTaskInfo taskInfo = getRecentTaskInfo(tasks, taskInfoBuilder);
+//                taskInfoBuilder.append(ORIGINAL_ACTIVITY).append(taskInfo.origActivity).append("\n");
+//            }
+//
+//            taskInfoBuilder.append(INFO_BOTTOM).append("\n");
+//
+//            String info = taskInfoBuilder.toString();
+//
+//            Utils.Info(context, "[getTaskInfo] ---");
+//            return info;
+//        }
+//
+//        private static ActivityManager.RecentTaskInfo getRecentTaskInfo(List<ActivityManager.AppTask> tasks, StringBuilder taskInfoBuilder) {
+//            ActivityManager.AppTask appTask = tasks.get(0);
+//            ActivityManager.RecentTaskInfo taskInfo = appTask.getTaskInfo();
+//
+//            taskInfoBuilder.append(TASK_ID).append(taskInfo.id).append("\n");
+//            taskInfoBuilder.append(ACTIVITY_NUMBER).append(taskInfo.numActivities).append("\n");
+//            taskInfoBuilder.append(TOP_ACTIVITY).append(getComponentName(taskInfo.topActivity)).append("\n");
+//            taskInfoBuilder.append(BASE_ACTIVITY).append(getComponentName(taskInfo.baseActivity)).append("\n");
+//            return taskInfo;
+//        }
+//
+//        /**
+//         * Get component name
+//         *
+//         * @param componentName component name
+//         * @return component short class name
+//         */
+//        private static String getComponentName(ComponentName componentName) {
+//            if (componentName == null) {
+//                return "null";
+//            }
+//
+//            return componentName.getShortClassName();
+//        }
+//    }
 
 
 }

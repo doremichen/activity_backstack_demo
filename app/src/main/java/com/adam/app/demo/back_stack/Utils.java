@@ -10,6 +10,8 @@ package com.adam.app.demo.back_stack;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 /**
@@ -58,4 +60,15 @@ public abstract class Utils {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 
+    public static boolean hideSoftKeyBoard(Activity activity) {
+        View view = activity.getCurrentFocus();
+        if (view == null) {
+            showToast(activity, "Invalid view!!!");
+            return false;
+        }
+
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        return true;
+    }
 }

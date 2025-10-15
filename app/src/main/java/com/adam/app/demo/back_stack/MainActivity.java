@@ -1,25 +1,31 @@
 /**
  * Copyright (C) 2025 Adam Chen. All rights reserved.
- *
+ * <p>
  * Description: This class is the Main activity of this demo.
  * Author: Adam Chen
  * Date: 2025-10-13
  */
 package com.adam.app.demo.back_stack;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.appbar.MaterialToolbar;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     @Override

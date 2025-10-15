@@ -21,6 +21,8 @@ public class SingleInstanceAct extends Activity {
 
         TextView text_view = (TextView) this.findViewById(R.id.text_task_id);
         text_view.setText(getString(R.string.demo_backstack_singleInstance_instruction));
+        TextView text_info = (TextView) this.findViewById(R.id.text_task_info);
+        text_info.setText(TaskInfoProvider.getTaskInfo(this));
     }
 
 }
